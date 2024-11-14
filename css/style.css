@@ -1,0 +1,393 @@
+/* Reset básico */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+body {
+    background-color: #180820;
+    color: #f0f0ff;
+    scrollbar-width: none;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #08083d;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0f0ff;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a {
+    color: #f0f0ff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-profile {
+    background-color: #3e3eb3;
+    color: #f0f0ff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar-profile:hover {
+    background-color: #5e5ed9;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 24px;
+    color: #f0f0ff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/**Nav Bar cierre**/
+
+/**Parte derecha**/
+.upload-story {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2rem;
+    background: url(https://i.pinimg.com/736x/c4/aa/4e/c4aa4e14abb8c7617328590deb8ee88f.jpg) no-repeat fixed center;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+.latest-story, .upload {
+    width: 40%;
+    border: 2px solid rgb(53, 12, 74);
+
+}
+
+.upload h1 {
+    font-family: "Anton SC", sans-serif;
+    font-size: 42px;
+    color: #f0f0ff;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: #431271;
+    border-radius: 40px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    outline: none;
+    color: white;
+    background-color: #34145b;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+input[type="text"], textarea, ::placeholder{
+    color: white;
+}
+
+button {
+    padding: 10px;
+    background-color: #6720a1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.latest-story-base{
+    background-color: #2f095e;
+    border-radius: 35px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: #431271;
+    padding: 5px;
+    border-radius: 85px;
+}
+
+.latest-story{
+    background-color: #250f4f;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+#latest-story-content {
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.btn_leer{
+    margin-top: 10px;
+}
+
+.upload{
+    background-color: #250f4f;
+    padding: 20px;
+    border-radius: 40px ;
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 1px solid white;
+}
+
+.uploaded-stories {
+    background-color: #120a32;
+    padding: 2rem;
+}
+
+.uploaded-stories h1 {
+    font-family: "Anton SC", sans-serif;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 35px;
+    background-color: #431271;
+    border-radius: 40px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.story-card {
+    background-color: #250f4f;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-card img {
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+
+.story-card p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    background-color: #34145b;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.story-card span {
+    background-color: #34145b;
+    border-radius: 10px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.story-card button {
+    margin-top: 10px;
+    color: white;
+    padding: 15px;
+    background-color: #6720a1;
+    
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #2d1a42;
+    width: 90%;
+    max-height: 90%;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #f0f0ff;
+    cursor: pointer;
+}
+
+.modal-story-content {
+    width: 60%;
+    padding: 20px;
+    color: #f0f0ff;
+    overflow-y: auto;
+    scrollbar-width: none;
+    scrollbar-color: white;
+    text-align: center;
+}
+
+.modal-comments {
+    width: 40%;
+    background-color: #160230;
+    padding: 20px;
+    color: #f0f0ff;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+}
+
+#comments-section {
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.titulo{
+    background-color: #431271;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dividir-comentario{
+    display: flex;
+    justify-content: space-around;
+}
+
+#like-button{
+    background-color: #460c55;
+}
+
+#comments-section p{
+    background-color: #23234b;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#new-comment{
+    background-color: #34145b;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    overflow:hidden
+}
+
+@media (max-width: 800px){
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        background-color: #08083d;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+ 
+
+    .upload-story {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .latest-story, .upload {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .story-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    }
+    .modal-comments {
+        width: 100%;
+        height: 250px;
+    }
+    .dividir-comentario{
+        display: flex;
+        justify-content: space-around;
+    }
+    .modal-story-content {
+        width: 100%;
+        padding: 20px;
+        color: #f0f0ff;
+        overflow-y: auto;
+    }
+    textarea{
+        align-self: center;
+        resize: none;
+        width: 100%;
+    }
+}

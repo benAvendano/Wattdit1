@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - WattDit</title>
+    <link rel="stylesheet" href="css/profile-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo"><a href="index.html">WattDit</a></div>
+        <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="navbar-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sugerencia.html">Sugerencia</a></li>
+        </ul>
+        
+    </nav>
+     
+    <div class="profile-container">
+        <div class="profile-left">
+            <div class="profile-sub">
+            <div class="user-icon">
+                <img src="https://i.pinimg.com/736x/26/91/8c/26918c8eb57f4fc07eade15aada8f81f.jpg" alt="Usuario" class="user-img">
+            </div>
+            <h2 id="profile-username">@Anónimo</h2>
+            <div class="profile-get">
+            <p>Publicaciones: <span id="total-posts">0</span></p>
+            <p>Total de likes: <span id="total-likes">0</span></p>
+            </div>
+        </div>
+        </div>
+
+        <div class="profile-right">
+            <h1>Mis Publicaciones</h1>
+            <div class="story-grid" id="profile-story-grid">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/profile-script.js"></script>
+</body>
+</html>

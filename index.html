@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WattDit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-logo"><a href="index.html">WattDit</a></div>
+        <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="navbar-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sugerencia.html">Sugerencia</a></li>
+            <li><a href="perfil.html"><button class="navbar-profile">Perfil</button></a></li>
+        </ul>
+        
+    </nav>
+
+    <section class="upload-story">
+        
+        <div class="latest-story">
+            <div class="latest-story-base">
+            <div class="user-info">
+                <img src="https://i.pinimg.com/736x/26/91/8c/26918c8eb57f4fc07eade15aada8f81f.jpg" alt="Usuario" class="user-icon">
+                <span id="latest-username">@Anónimo</span>
+            </div>
+            <p id="latest-story-content">Aquí se mostrará tu historia más reciente...</p>
+            
+        </div>
+        <button class="btn_leer" id="read-more-button" style="display:none;">Leer más</button>
+    </div>
+        <div class="upload">
+            <h1>¡Sube tus historias!</h1>
+            <input type="text" id="username" maxlength="7" placeholder="Nombre de usuario (Opcional)">
+            <textarea id="story-content" placeholder="Escribe tu historia aquí..."></textarea>
+            <button onclick="submitStory()" >Publicar Historia</button>
+        </div>
+    </section>
+
+    <section class="uploaded-stories">
+        <h1>Historias Recientes</h1>
+        <div class="story-grid" id="story-grid">
+        </div>
+    </section>
+
+    <div class="modal" id="story-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div class="modal-story-content" id="modal-story-content"></div>
+            <div class="modal-comments">
+                <div class="titulo">
+                <h2>Comentarios</h2>
+            </div>
+                <div id="comments-section"></div>
+                <textarea id="new-comment" placeholder="Escribe un comentario..."></textarea>
+                <div class="dividir-comentario">
+                <button onclick="addComment()">Comentar</button>
+                <button id="like-button" onclick="toggleLike()">Me gustas (<span id="like-count">0</span>)</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

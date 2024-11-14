@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugerenciaa - WattDit</title>
+    <link rel="stylesheet" href="css/suggestion-styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo"><a href="index.html">WattDit</a></div>
+        <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+        <ul id="navbar-links" class="navbar-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sugerencia.html">Sugerencia</a></li>
+            <li><a href="perfil.html"><button class="navbar-profile">Perfil</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Sugerencias</h2>
+        <form id="sugerenciaform" onsubmit="return validarFormulario()">
+            <div class="form-group">
+                <input type="text" id="nombre" name="nombre"  placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Correo">
+            </div>
+            <div class="form-group">
+                <textarea id="sugerencia" name="sugerencia" required placeholder="Escribe tu sugerencia"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Sugerencia</button>
+        </form>
+        <div id="respuesta" style="display:none; padding:10px; margin-top: 20px; text-align: center;"></div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="js/suggestion-script.js"></script>
+
+    <script type="text/javascript">
+        function toggleMenu() {
+            const links = document.getElementById('navbar-links');
+            links.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
