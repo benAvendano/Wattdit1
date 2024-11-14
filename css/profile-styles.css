@@ -94,7 +94,7 @@ a{
 .profile-left {
     width: 30%;
     background: url(https://i.pinimg.com/736x/1b/78/1e/1b781e8c69bc62162d4900f8dbf62826.jpg) fixed no-repeat center;
-    background-size: contain;
+    background-size: cover;
     filter:brightness(0.9);
     padding: 20px;
     border-radius: 10px;
